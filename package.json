@@ -1,5 +1,5 @@
 {
-  "name": "shallot-http-json-body-parser",
+  "name": "@shallot/http-json-body-parser",
   "version": "1.0.0",
   "description": "JSON body parsing middlewares for REST APIs",
   "keywords": [
