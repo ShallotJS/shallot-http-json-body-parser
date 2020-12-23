@@ -9,7 +9,7 @@ import type { APIGatewayEvent } from 'aws-lambda';
 import ContentType from 'content-type';
 import HttpError from 'http-errors';
 
-interface TShallotJSONBodyParserOptions extends Record<string, unknown> {
+export interface TShallotJSONBodyParserOptions extends Record<string, unknown> {
   /** A function that transforms the results. This function is called for each member of the object.
    * If a member contains nested objects, the nested objects are transformed before the parent object is. */
   reviver?: (key: string, value: unknown) => unknown;
