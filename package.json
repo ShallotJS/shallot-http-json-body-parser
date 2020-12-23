@@ -1,6 +1,6 @@
 {
   "name": "@shallot/http-json-body-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON body parsing middlewares for REST APIs",
   "keywords": [
     "typescript",
