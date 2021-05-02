@@ -3,7 +3,7 @@
  * https://github.com/middyjs/middy/tree/master/packages/http-json-body-parser
  */
 
-import type { ShallotMiddlewareWithOptions } from 'shallot/dist/aws/core';
+import type { ShallotAWSMiddlewareWithOptions } from '@shallot/aws';
 import type { APIGatewayEvent } from 'aws-lambda';
 
 import ContentType from 'content-type';
@@ -30,12 +30,13 @@ const isJSONContentType = (requestHeaders: APIGatewayEvent['headers']): boolean 
  *
  * @param config optional object to pass config options
  */
-const ShallotAWSHttpJsonBodyParser: ShallotMiddlewareWithOptions<
+const ShallotAWSHttpJsonBodyParser: ShallotAWSMiddlewareWithOptions<
   APIGatewayEvent,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   any,
   TShallotJSONBodyParserOptions
 > = (config) => ({
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   before: async (request) => {
     if (request.event.headers != null && isJSONContentType(request.event.headers)) {
       try {
